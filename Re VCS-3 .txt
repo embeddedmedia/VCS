@@ -1,0 +1,132 @@
+From:	Tim FERNANDEZ-HART
+Sent:	22 March 2023 14:17
+To:	Steven MATTU
+Subject:	Re: VCS-3 
+Attachments:	vcs-3_min_vitis.tcl; bootgen.bif; QSPI_offsets.jpg; flash_partitions.jpg; 
+DDR_JTAG_offsets.jpg; system-user.dtsi
+
+Hi Steven, 
+
+Attached is the .tcl for base project I have been using. It was built in Vivado 2022.2. Although 
+my problems flashing the QSPI could be with that 
+version (see: https://www.hackster.io/whitney-knitter/zynqberry-qspi-boot-workaround-for-
+vitis-2021-x-and-later-d56d98). Emilie (Sundancer) is working on a similar project, she also said 
+that the fsbl from 2022.2 is broken and if replaced by an fsbl from 2019.2 flashing works. That is 
+on a different board however, but chimes with the above blog post. I'll try that next. 
+
+I am new to embedded linux, device trees, QSPI (the list goes on), but as far as I can see 
+everything should be in order with regards to my partitions and offsets (see attached pics and 
+.bif file written by hand). 
+
+The QSPI image was built in petalinux 2022.2 and packaged using bootgen 2020.2 (Opteran 
+reported errors with the 2022.2 Bootgen tool). No errors were reported when building and 
+packaging.
+
+And yes, definitely good to be able to get more eyes on what I'm doing. If at least to say "that 
+bit is fine". On that note, I have attached my simple system-user.dtsi too. I haven't mentioned 
+any QSPI partitions in that, but I didn't think that would matter just yet as I can't even get the 
+board to boot over JTAG.
+
+See you Friday, 
+
+Tim
+
+
+
+
+
+ 
+From: Steven MATTU <Steven.M@sundance.com> 
+Sent: Wednesday, March 22, 2023 12:11 PM 
+To: Tim FERNANDEZ-HART <Tim.FH@sundance.com> 
+Subject: Re: VCS-3 
+ 
+Hi Tim
+
+That's fine regarding the project, it would be great if you can send it over when you get the chance.
+
+I've had a quick look at the problem your currently seeing.
+
+From the boot info it looks like the bit and both elf files are transferring ok but there is error around the 
+Device Tree location. Maybe check the DTB image offset locations in the “petalinux-config” menu.
+
+Was the QSPI Linux image created in Vitis? If it was can you show me the “BIF” file? that will contain the 
+DTB offset.
+
+Not sure if any of this will help but maybe it can point us in the right direction.
+
+I'm looking forward to working on this project, its always nice to bounce ideas and thoughts off 
+someone else.
+
+Regards 
+Steve
+
+Sent from Outlook for Android
+ 
+From: Tim FERNANDEZ-HART <Tim.FH@sundance.com> 
+Sent: Wednesday, March 22, 2023 6:57:18 AM 
+To: Steven MATTU <Steven.M@sundance.com> 
+Subject: Re: VCS-3 
+ 
+Hi Steve, 
+
+I think that was a 'broken' test project I used to get the correct Zynq settings from (clocks, DDR 
+etc). I used it to put together a base project which just has a few clocks, resets and interrupts. I 
+will send that to you later today (I noticed a small problem with it yesterday yesterday). My 
+plan was to use a very basic basee project and then add cameras, CAN, etc. until we have a full 
+design. 
+
+I have built a petalinux project, packaged the boot.bin but then I get this error when trying to 
+flash it into the QSPI:
+
+sundance@viv-vit2022-2:~/embedded_linux/petalinux/distro-boot-vanilla/images/linux$ 
+petalinux-boot --jtag --u-boot --hw_server-url 80.229.31.146:3121 
+[INFO] Sourcing buildtools
+INFO: Use bitstream: "/home/sundance/embedded_linux/petalinux/distro-boot-
+vanilla/images/linux/system.bit.
+INFO: Please use --fpga --bitstream <BITSTREAM> to specify a bitstream if you want to use 
+other bitstream.
+INFO: Launching XSDB for file download and boot.
+INFO: This may take a few minutes, depending on the size of your image.
+rlwrap: warning: your $TERM is 'xterm-256color' but rlwrap couldn't find it in the terminfo 
+database. Expect some problems.: Inappropriate ioctl for device
+INFO: Configuring the FPGA...                                                                                                                
+INFO: Downloading bitstream: /home/sundance/embedded_linux/petalinux/distro-boot-
+vanilla/images/linux/system.bit to the target.
+INFO: Downloading ELF file: /home/sundance/embedded_linux/petalinux/distro-boot-
+vanilla/images/linux/pmufw.elf to the target.                
+INFO: Downloading ELF file: /home/sundance/embedded_linux/petalinux/distro-boot-
+vanilla/images/linux/zynqmp_fsbl.elf to the target.          
+INFO: Loading image: /home/sundance/embedded_linux/petalinux/distro-boot-
+vanilla/images/linux/system.dtb at 0x00100000                       
+Memory write error at 0x100000. MMU fault at VA 0x100000. Translation fault, level 2 
+
+I'm unclear whether this is a problem with what I have done, or a bug in Vitis/Vivado 2022.2. 
+Any clues?
+
+Glad to have you on board! 
+
+Tim
+
+
+ 
+From: Steven MATTU <Steven.M@sundance.com> 
+Sent: Tuesday, March 21, 2023 10:06 PM 
+To: Tim FERNANDEZ-HART <Tim.FH@sundance.com> 
+Subject: VCS-3 
+ 
+Hi Tim
+ 
+I am currently looking into the VCS-3 project and recreating the design available  at the following 
+location
+https://github.com/SundanceMultiprocessorTechnology/VCS-
+3/tree/main/Hardware/Vivado/Base_project/2022.1
+ 
+I can build the project from the tcl script however there are a few unconnected pins/ports in the block 
+design, just wondering if you also had the same issue when rebuilding the project?
+ 
+Also, just wondering if there a software project for this design, either Petalinux or Bare-metal?
+ 
+Thanks for you help, we have a meeting on Friday so look forward to meeting you then.
+ 
+Steve
