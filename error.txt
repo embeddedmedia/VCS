@@ -1,0 +1,659 @@
+xsct% 
+****** Xilinx Software Commandline Tool (XSCT) v2022.2.0
+  **** SW Build 0 on 2022-10-13-12:09:39
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+XSDB Server URL: TCP:localhost:53932
+xsct% XSDB Server Channel: tcfchan#0
+INFO: [Hsi 55-2053] elapsed time for repository (E:/Xilinx/Vitis/2022.2/data/embeddedsw) loading 1 seconds
+Loading the sw platform from C:/workspace_2022_2/VCS3_1/platform.spr
+Reading the platform  : "VCS3_1"
+connect -xvc-url TCP:localhost:2542
+attempting to launch hw_server
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:18:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+****** Xilinx hw_server v2022.2
+
+  **** Build date : Oct 14 2022 at 05:18:10
+
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+
+INFO: hw_server application started
+
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+
+INFO: To connect to this hw_server instance use url: TCP:127.0.0.1:3121
+
+
+
+tcfchan#1
+xsct% dir
+ Volume in drive E is Data
+ Volume Serial Number is 9656-71AB
+
+ Directory of E:\Xilinx\Vitis\2022.2\bin
+
+18/05/2023  23:00    <DIR>          .
+18/05/2023  23:00    <DIR>          ..
+18/05/2023  22:07    <DIR>          .Xil
+14/10/2022  04:24                88 a9-linaro-pre-build-step
+14/10/2022  04:24               115 a9-linaro-pre-build-step.bat
+14/10/2022  04:25               786 aie_import
+14/10/2022  04:25               303 aie_import.bat
+14/10/2022  12:12             1,450 archive_summary
+14/10/2022  12:12             1,538 archive_summary.bat
+13/10/2022  19:59             1,394 bootgen
+13/10/2022  19:59             1,487 bootgen.bat
+14/10/2022  04:24               183 build-bsp
+14/10/2022  04:24               193 build-bsp.bat
+14/10/2022  04:24               785 buildinfo
+14/10/2022  04:24               228 buildinfo.bat
+14/10/2022  04:24                76 buildplatform.bat
+14/10/2022  04:24                95 buildplatform.sh
+14/10/2022  04:25               988 build_xd_ip_db
+14/10/2022  04:25               554 build_xd_ip_db.bat
+14/10/2022  04:25            25,346 build_xd_ip_db.tcl
+14/10/2022  04:25               272 caller_rewrite
+14/10/2022  04:25               435 caller_rewrite.bat
+13/10/2022  19:59               805 cdoutil
+13/10/2022  19:59               918 cdoutil.bat
+14/10/2022  04:25               781 cf2bd
+14/10/2022  04:25               298 cf2bd.bat
+14/10/2022  04:25               270 cf2sw
+14/10/2022  04:25               192 cf2sw.bat
+14/10/2022  04:25               457 cf2xd
+14/10/2022  04:25               192 cf2xd.bat
+14/10/2022  04:25               780 cfgen
+14/10/2022  04:25               298 cfgen.bat
+14/10/2022  04:24               285 cf_xsd
+14/10/2022  04:24               122 cf_xsd.bat
+14/10/2022  04:24             9,843 cf_xsd.tcl
+14/10/2022  04:25               258 clang_wrapper
+14/10/2022  04:25               442 clang_wrapper.bat
+14/10/2022  04:24            45,133 common_procs.py
+14/10/2022  04:24             2,081 create_sc_xo
+14/10/2022  12:12             3,278 cs_server
+14/10/2022  12:12             1,085 cs_server.bat
+14/10/2022  04:24               801 data2mem
+14/10/2022  04:24               915 data2mem.bat
+14/10/2022  04:24             2,533 debug_hw
+14/10/2022  04:24             1,763 debug_hw.bat
+14/10/2022  12:09               662 diffbd
+14/10/2022  12:09               409 diffbd.bat
+14/10/2022  04:24           406,184 dtc
+14/10/2022  04:24             1,969 emconfigutil
+14/10/2022  04:24            11,946 fa_pack
+14/10/2022  04:25            13,120 flash_strip_bw
+14/10/2022  04:24             6,596 generate-platform.sh
+14/10/2022  04:24                84 generate_system_bif.bat
+14/10/2022  04:25               457 hls_adapter_generator
+14/10/2022  04:25               192 hls_adapter_generator.bat
+14/10/2022  04:25               582 hls_axilite_map.awk
+14/10/2022  04:25               595 hls_wrapper_gen
+14/10/2022  04:25               447 hls_wrapper_gen.bat
+14/10/2022  12:12             3,841 hw_server
+14/10/2022  12:12             1,085 hw_server.bat
+14/10/2022  12:12               884 hw_serverpv
+14/10/2022  12:12             1,087 hw_serverpv.bat
+14/10/2022  04:25             1,984 kernelinfo
+14/10/2022  04:25             2,171 kernelinfo.bat
+14/10/2022  04:24             2,607 launch_emulator
+14/10/2022  04:24             1,760 launch_emulator.bat
+14/10/2022  04:24            40,944 launch_emulator.py
+14/10/2022  12:19             1,160 ldlibpath.sh
+14/10/2022  04:24             1,785 legacy_launch_emulator
+14/10/2022  04:25               263 llvm-link
+14/10/2022  04:25               414 llvm-link.bat
+14/10/2022  12:19            14,817 loader
+14/10/2022  12:19            17,901 loader.bat
+14/10/2022  12:09             1,013 manage_ipcache
+14/10/2022  12:09               927 manage_ipcache.bat
+14/10/2022  04:25             1,313 messagepp
+14/10/2022  04:25             1,315 messagepp.bat
+14/10/2022  04:25               803 mfsgen
+14/10/2022  04:25               917 mfsgen.bat
+14/10/2022  04:25             1,022 mkfatimg
+14/10/2022  04:25               620 mkfatimg.bat
+14/10/2022  04:25               831 perf_analyze
+14/10/2022  04:25               927 perf_analyze.bat
+14/10/2022  04:25             2,266 platforminfo
+14/10/2022  04:25             2,171 platforminfo.bat
+14/10/2022  04:25               273 pragma_gen
+14/10/2022  04:25               447 pragma_gen.bat
+14/10/2022  04:24               250 pre-build
+14/10/2022  04:24               267 pre-build.bat
+14/10/2022  04:24               806 prep_target
+14/10/2022  04:24               922 prep_target.bat
+14/10/2022  04:24             6,408 pre_processing.py
+14/10/2022  04:25               809 program_flash
+14/10/2022  04:25               925 program_flash.bat
+14/10/2022  12:12               812 program_ftdi
+14/10/2022  12:12               927 program_ftdi.bat
+14/10/2022  04:24             1,174 qemu-img.bat
+14/10/2022  04:24             1,174 qemu-system-aarch64.bat
+14/10/2022  04:24             1,174 qemu-system-microblazeel.bat
+14/10/2022  12:19             9,318 rdiArgs.bat
+14/10/2022  12:19            10,346 rdiArgs.sh
+08/05/2023  15:31    <DIR>          scripts
+14/10/2022  04:24             2,245 sdcard_gen
+14/10/2022  04:24             1,454 sdcard_gen.bat
+14/10/2022  04:24            20,114 sdcard_gen.tcl
+14/10/2022  04:24             4,164 sd_card_resize.py
+14/10/2022  12:19                43 setEnvAndRunCmd.bat
+14/10/2022  12:19                86 setEnvAndRunCmd.sh
+14/10/2022  12:19            13,494 setupEnv.bat
+14/10/2022  12:19             7,141 setupEnv.sh
+14/10/2022  12:12             3,278 stapl_player
+14/10/2022  12:12             1,085 stapl_player.bat
+14/10/2022  04:25               272 stub_gen
+14/10/2022  04:25               448 stub_gen.bat
+14/10/2022  12:12             1,060 svf_utility
+14/10/2022  12:12             1,085 svf_utility.bat
+14/10/2022  12:12               884 symbol_server
+14/10/2022  12:12             1,085 symbol_server.bat
+14/10/2022  04:25               787 system_link
+14/10/2022  04:25               304 system_link.bat
+14/10/2022  04:24               807 tcfgdbclient
+14/10/2022  04:24               923 tcfgdbclient.bat
+14/10/2022  12:12               884 tcflog
+14/10/2022  12:12             1,085 tcflog.bat
+14/10/2022  12:19                48 unsetldlibpath.sh
+08/05/2023  13:46    <DIR>          unwrapped
+14/10/2022  04:24               304 unzip.bat
+14/10/2022  04:24             3,127 update-platform.sh
+14/10/2022  12:13             1,027 updatemem
+14/10/2022  12:09               946 updatemem.bat
+14/10/2022  04:24             1,854 v++
+14/10/2022  04:24             2,100 v++.bat
+14/10/2022  04:24             4,716 vitis
+14/10/2022  04:24             2,492 vitis.bat
+14/10/2022  04:24               119 vitis.vbs
+04/10/2022  08:53            10,277 vitisng
+04/10/2022  08:53             5,488 vitisng-server
+14/10/2022  12:12             1,785 vitis_analyzer
+14/10/2022  12:12             2,560 vitis_analyzer.bat
+14/10/2022  12:12               954 vivado_lab
+14/10/2022  12:12             1,123 vivado_lab.bat
+14/10/2022  04:24               750 vperf
+14/10/2022  04:24               332 vperf.bat
+14/10/2022  04:24             2,308 vpl
+14/10/2022  04:24             2,230 vpl.bat
+14/10/2022  04:25               831 vp_analyze
+14/10/2022  04:25               927 vp_analyze.bat
+14/10/2022  12:35             1,823 xcd
+14/10/2022  12:35             1,169 xcd.bat
+14/10/2022  04:25             1,216 xclbinutil
+14/10/2022  04:25               394 xclbinutil.bat
+14/10/2022  04:24               790 xgdb
+14/10/2022  04:25               489 XidanePass
+14/10/2022  04:25               857 XidanePass.bat
+13/10/2022  19:59               337 xlicdiag
+13/10/2022  19:59               606 xlicdiag.bat
+14/10/2022  04:24               705 xmlcatalog
+14/10/2022  04:24               333 xmlcatalog.bat
+14/10/2022  04:24               702 xmllint
+14/10/2022  04:24               330 xmllint.bat
+14/10/2022  12:09             1,829 xrcserver
+14/10/2022  12:35             1,169 xrcserver.bat
+14/10/2022  04:25               811 xrflink
+14/10/2022  04:25               927 xrflink.bat
+14/10/2022  12:12             3,093 xrt_server
+14/10/2022  12:12             1,085 xrt_server.bat
+14/10/2022  04:24             8,154 xsct
+14/10/2022  04:24             1,866 xsct.bat
+14/10/2022  12:12             1,845 xsdb
+14/10/2022  12:12               919 xsdb.bat
+14/10/2022  04:24               703 xsltproc
+14/10/2022  04:24               331 xsltproc.bat
+14/10/2022  04:24               627 xtclsh
+14/10/2022  04:24               772 xtclsh.bat
+14/10/2022  12:12               884 xvc_pcie
+14/10/2022  04:24               298 zip.bat
+08/05/2023  14:12    <DIR>          __pycache__
+             171 File(s)        840,039 bytes
+               6 Dir(s)  112,831,614,976 bytes free
+xsct% cd c:/
+xsct% dir
+ Volume in drive C has no label.
+ Volume Serial Number is 7679-4A9F
+
+ Directory of c:\
+
+13/02/2021  12:24    <DIR>          .Xilinx
+26/01/2021  21:29    <DIR>          Analog Devices
+11/09/2021  08:36    <DIR>          BACKUP
+23/01/2022  10:20    <DIR>          Cadence
+23/05/2022  15:54    <DIR>          cern
+13/05/2022  19:14    <DIR>          cern_projects
+17/05/2022  19:58    <DIR>          cern_project_unzip
+22/03/2023  21:10    <DIR>          d
+22/10/2021  23:31    <DIR>          dev
+11/09/2021  08:52    <DIR>          embedded_media
+05/09/2021  13:35    <DIR>          ffmpeg-4.4-full_build
+20/05/2022  14:28    <DIR>          fmc-adc-1g8b2ch
+10/02/2022  22:37    <DIR>          hdl-make
+14/02/2022  14:20    <DIR>          hdl-make-git
+20/02/2022  10:03    <DIR>          hdl-make-master
+18/05/2023  22:36    <DIR>          home
+21/11/2021  12:33    <DIR>          inetpub
+05/05/2023  04:38    <DIR>          Intel
+27/04/2023  19:09    <DIR>          lynsyn-host-software_win-x86_64_v1.3
+22/01/2022  14:39    <DIR>          OrCAD
+22/01/2022  14:43    <DIR>          OrCAD_Data
+07/12/2019  10:14    <DIR>          PerfLogs
+04/05/2023  21:24    <DIR>          Program Files
+03/05/2023  23:03    <DIR>          Program Files (x86)
+11/02/2022  10:38    <DIR>          Python27
+11/02/2022  10:45    <DIR>          Python38
+12/08/2022  11:39    <DIR>          SPB_Data
+28/02/2021  09:08    <DIR>          trd2015.2
+25/08/2020  19:13    <DIR>          Users
+29/03/2023  13:21    <DIR>          v2018_3
+08/05/2023  07:37    <DIR>          VCS3
+08/05/2023  10:47    <DIR>          VCS3_2022_1
+08/05/2023  15:59    <DIR>          VCS3_2022_2
+03/06/2021  08:22    <DIR>          vitis_hls_projects
+01/05/2023  14:56    <DIR>          vivado
+01/05/2023  14:56    <DIR>          vivado_odk3
+10/03/2021  21:25    <DIR>          VM_Share
+16/04/2023  16:44    <DIR>          Windows
+15/04/2023  00:25    <DIR>          workspace
+08/05/2023  10:52    <DIR>          workspace_2020_2
+01/05/2023  21:22    <DIR>          workspace_2021_1
+18/05/2023  23:00    <DIR>          workspace_2022_2
+04/05/2023  18:11    <DIR>          Xilinx
+               0 File(s)              0 bytes
+              43 Dir(s)  100,224,970,752 bytes free
+xsct% us Users
+xsct% invalid command name "us"
+
+cd Users
+xsct% cd ecoms
+xsct% cd Downloads
+xsct% cd QSPIloadflash
+couldn't change working directory to "QSPIloadflash": no such file or directory
+
+xsct% cd QSPIflashtools
+xsct% dir
+ Volume in drive C has no label.
+ Volume Serial Number is 7679-4A9F
+
+ Directory of c:\Users\ecoms\Downloads\QSPIflashtools
+
+16/05/2023  22:46    <DIR>          .
+16/05/2023  22:46    <DIR>          ..
+16/05/2023  22:44           152,504 bl31.elf
+16/05/2023  22:44             3,478 boot_USB.scr
+16/05/2023  22:44           510,240 custom_fsbl.elf
+16/05/2023  22:44           496,844 pmufw.elf
+16/05/2023  22:44           815,342 psu_init.tcl
+16/05/2023  22:44         3,951,623 system.bit
+16/05/2023  22:44            62,689 system.dtb
+16/05/2023  22:45         9,332,200 u-boot.elf
+16/05/2023  22:45             1,122 uboot_load_flash.tcl
+               9 File(s)     15,326,042 bytes
+               2 Dir(s)  100,223,725,568 bytes free
+xsct% source uboot_load_flash.tcl
+INFO: Configuring the FPGA...
+INFO: Downloading bitstream: system.bit to the target.
+
+
+No supported FPGA device found
+
+xsct% target
+xsct% Info: Cortex-A53 #0 (target 10) Stopped at 0xfffcf110 (External Debug Request)
+target
+xsct%   1  PS TAP
+     2  PMU
+        3  MicroBlaze PMU (Sleeping. No clock)
+     4  PL
+  5  PSU
+     6  RPU (Reset)
+        7  Cortex-R5 #0 (RPU Reset)
+        8  Cortex-R5 #1 (RPU Reset)
+     9  APU
+       10  Cortex-A53 #0 (External Debug Request, EL3(S)/A64)
+       11  Cortex-A53 #1 (Power On Reset)
+       12  Cortex-A53 #2 (Power On Reset)
+       13  Cortex-A53 #3 (Power On Reset)
+xsct% source uboot_load_flash.tcl
+INFO: Configuring the FPGA...
+INFO: Downloading bitstream: system.bit to the target.
+
+
+initializing
+  0%    0MB   0.0MB/s  ??:?? ETA
+  9%    0MB   0.6MB/s  ??:?? ETA
+ 12%    0MB   0.4MB/s  ??:?? ETA
+ 14%    0MB   0.3MB/s  ??:?? ETA
+ 18%    0MB   0.3MB/s  ??:?? ETA
+ 21%    0MB   0.3MB/s  00:11 ETA
+ 24%    0MB   0.3MB/s  00:10 ETA
+ 27%    1MB   0.3MB/s  00:10 ETA
+ 30%    1MB   0.2MB/s  00:10 ETA
+ 33%    1MB   0.2MB/s  00:10 ETA
+ 36%    1MB   0.2MB/s  00:10 ETA
+ 39%    1MB   0.2MB/s  00:09 ETA
+ 41%    1MB   0.2MB/s  00:09 ETA
+ 44%    1MB   0.2MB/s  00:09 ETA
+ 48%    1MB   0.2MB/s  00:08 ETA
+ 50%    1MB   0.2MB/s  00:08 ETA
+ 53%    2MB   0.2MB/s  00:07 ETA
+ 56%    2MB   0.2MB/s  00:07 ETA
+ 59%    2MB   0.2MB/s  00:07 ETA
+ 63%    2MB   0.2MB/s  00:06 ETA
+ 66%    2MB   0.2MB/s  00:05 ETA
+ 69%    2MB   0.2MB/s  00:05 ETA
+ 72%    2MB   0.2MB/s  00:04 ETA
+ 74%    2MB   0.2MB/s  00:04 ETA
+ 76%    2MB   0.2MB/s  00:04 ETA
+ 80%    3MB   0.2MB/s  00:03 ETA
+ 84%    3MB   0.2MB/s  00:02 ETA
+ 87%    3MB   0.2MB/s  00:02 ETA
+ 89%    3MB   0.2MB/s  00:01 ETA
+ 93%    3MB   0.2MB/s  00:01 ETA
+ 96%    3MB   0.2MB/s  00:00 ETA
+ 99%    3MB   0.2MB/s  00:00 ETA
+100%    3MB   0.2MB/s  00:18    
+Info: MicroBlaze PMU (target 3) Stopped at 0xffdc8dfc (Stop)
+INFO: Downloading ELF file: pmufw.elf to the target.
+
+
+Downloading Program -- C:/Users/ecoms/Downloads/QSPIflashtools/pmufw.elf
+	section, .vectors.reset: 0xffdc0000 - 0xffdc0007
+	section, .vectors.sw_exception: 0xffdc0008 - 0xffdc000f
+	section, .vectors.interrupt: 0xffdc0010 - 0xffdc0017
+	section, .vectors.hw_exception: 0xffdc0020 - 0xffdc0027
+	section, .text: 0xffdc0050 - 0xffdd19e7
+	section, .rodata: 0xffdd19e8 - 0xffdd2c03
+	section, .data: 0xffdd2c04 - 0xffdd6d23
+	section, .sdata2: 0xffdd6d24 - 0xffdd6d27
+	section, .sdata: 0xffdd6d28 - 0xffdd6d27
+	section, .sbss: 0xffdd6d28 - 0xffdd6d27
+	section, .bss: 0xffdd6d40 - 0xffddaa5f
+	section, .srdata: 0xffddaa60 - 0xffddb37b
+	section, .stack: 0xffddb37c - 0xffddc37f
+	section, .xpbr_serv_ext_tbl: 0xffddf6e0 - 0xffddfadf
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 16%    0MB   0.0MB/s  ??:?? ETA
+ 33%    0MB   0.0MB/s  ??:?? ETA
+ 50%    0MB   0.0MB/s  ??:?? ETA
+ 67%    0MB   0.0MB/s  ??:?? ETA
+ 96%    0MB   0.0MB/s  ??:?? ETA
+100%    0MB   0.0MB/s  00:03    
+
+Setting PC to Program Start Address 0xffdd1234
+Successfully downloaded C:/Users/ecoms/Downloads/QSPIflashtools/pmufw.elf
+Info: MicroBlaze PMU (target 3) Running
+Info: Cortex-A53 #0 (target 10) Stopped at 0xfffc0000 (External Debug Request)
+INFO: Downloading ELF file: fsbl.elf to the target.
+
+
+Downloading Program -- C:/Users/ecoms/Downloads/QSPIflashtools/custom_fsbl.elf
+	section, .text: 0xfffc0000 - 0xfffd0f6f
+	section, .note.gnu.build-id: 0xfffd0f70 - 0xfffd0f93
+	section, .init: 0xfffd0fc0 - 0xfffd0ff3
+	section, .fini: 0xfffd1000 - 0xfffd1033
+	section, .rodata: 0xfffd1040 - 0xfffd3487
+	section, .sys_cfg_data: 0xfffd34c0 - 0xfffd3beb
+	section, .mmu_tbl0: 0xfffd4000 - 0xfffd400f
+	section, .mmu_tbl1: 0xfffd5000 - 0xfffd6fff
+	section, .mmu_tbl2: 0xfffd7000 - 0xfffdafff
+	section, .data: 0xfffdb000 - 0xfffdc2af
+	section, .sbss: 0xfffdc2b0 - 0xfffdc2bf
+	section, .bss: 0xfffdc2c0 - 0xfffde83f
+	section, .heap: 0xfffde840 - 0xfffdec3f
+	section, .stack: 0xfffdec40 - 0xfffe0c3f
+	section, .dup_data: 0xfffe0c40 - 0xfffe1eef
+	section, .handoff_params: 0xfffe9e00 - 0xfffe9e87
+	section, .bitstream_buffer: 0xffff0040 - 0xfffffc3f
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 14%    0MB   0.0MB/s  ??:?? ETA
+ 28%    0MB   0.0MB/s  ??:?? ETA
+ 42%    0MB   0.0MB/s  00:05 ETA
+ 56%    0MB   0.0MB/s  00:03 ETA
+ 71%    0MB   0.0MB/s  00:02 ETA
+ 85%    0MB   0.0MB/s  00:01 ETA
+ 99%    0MB   0.0MB/s  00:00 ETA
+100%    0MB   0.0MB/s  00:08    
+
+Setting PC to Program Start Address 0xfffc0000
+Successfully downloaded C:/Users/ecoms/Downloads/QSPIflashtools/custom_fsbl.elf
+Info: Cortex-A53 #0 (target 10) Running
+Info: Cortex-A53 #0 (target 10) Stopped at 0xfffce1f0 (External Debug Request)
+can't read "n": no such variable
+
+xsct% source uboot_load_flash.tcl
+INFO: Configuring the FPGA...
+INFO: Downloading bitstream: system.bit to the target.
+
+
+initializing
+  0%    0MB   0.0MB/s  ??:?? ETA
+  9%    0MB   0.6MB/s  ??:?? ETA
+ 12%    0MB   0.4MB/s  ??:?? ETA
+ 15%    0MB   0.3MB/s  ??:?? ETA
+ 18%    0MB   0.3MB/s  ??:?? ETA
+ 21%    0MB   0.3MB/s  ??:?? ETA
+ 24%    0MB   0.3MB/s  00:10 ETA
+ 26%    1MB   0.3MB/s  00:10 ETA
+ 30%    1MB   0.2MB/s  00:10 ETA
+ 33%    1MB   0.2MB/s  00:10 ETA
+ 36%    1MB   0.2MB/s  00:10 ETA
+ 39%    1MB   0.2MB/s  00:09 ETA
+ 42%    1MB   0.2MB/s  00:09 ETA
+ 46%    1MB   0.2MB/s  00:09 ETA
+ 48%    1MB   0.2MB/s  00:08 ETA
+ 51%    1MB   0.2MB/s  00:08 ETA
+ 54%    2MB   0.2MB/s  00:07 ETA
+ 57%    2MB   0.2MB/s  00:07 ETA
+ 60%    2MB   0.2MB/s  00:06 ETA
+ 63%    2MB   0.2MB/s  00:06 ETA
+ 66%    2MB   0.2MB/s  00:05 ETA
+ 69%    2MB   0.2MB/s  00:05 ETA
+ 72%    2MB   0.2MB/s  00:04 ETA
+ 75%    2MB   0.2MB/s  00:04 ETA
+ 78%    2MB   0.2MB/s  00:03 ETA
+ 81%    3MB   0.2MB/s  00:03 ETA
+ 84%    3MB   0.2MB/s  00:02 ETA
+ 87%    3MB   0.2MB/s  00:02 ETA
+ 90%    3MB   0.2MB/s  00:01 ETA
+ 93%    3MB   0.2MB/s  00:01 ETA
+ 97%    3MB   0.2MB/s  00:00 ETA
+ 99%    3MB   0.2MB/s  00:00 ETA
+100%    3MB   0.2MB/s  00:18    
+Info: MicroBlaze PMU (target 3) Stopped at 0xffdc8dfc (Stop)
+XPfw_Main() at xpfw_core.c: 372
+372: couldn't open "/home/yzq/Opteran/ODK3/Test_Michal/Petalinux_Build_Script/petalinux/projects/odk3_recovery/build/tmp/work/zynqmp_generic-xilinx-linux/pmu-firmware/2022.2+gitAUTOINC+5330a64c8e-r0/git/pmu-firmware/pmu-firmware/xpfw_core.c": no such file or directory
+INFO: Downloading ELF file: pmufw.elf to the target.
+
+
+Downloading Program -- C:/Users/ecoms/Downloads/QSPIflashtools/pmufw.elf
+	section, .vectors.reset: 0xffdc0000 - 0xffdc0007
+	section, .vectors.sw_exception: 0xffdc0008 - 0xffdc000f
+	section, .vectors.interrupt: 0xffdc0010 - 0xffdc0017
+	section, .vectors.hw_exception: 0xffdc0020 - 0xffdc0027
+	section, .text: 0xffdc0050 - 0xffdd19e7
+	section, .rodata: 0xffdd19e8 - 0xffdd2c03
+	section, .data: 0xffdd2c04 - 0xffdd6d23
+	section, .sdata2: 0xffdd6d24 - 0xffdd6d27
+	section, .sdata: 0xffdd6d28 - 0xffdd6d27
+	section, .sbss: 0xffdd6d28 - 0xffdd6d27
+	section, .bss: 0xffdd6d40 - 0xffddaa5f
+	section, .srdata: 0xffddaa60 - 0xffddb37b
+	section, .stack: 0xffddb37c - 0xffddc37f
+	section, .xpbr_serv_ext_tbl: 0xffddf6e0 - 0xffddfadf
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 16%    0MB   0.0MB/s  ??:?? ETA
+ 50%    0MB   0.0MB/s  ??:?? ETA
+ 67%    0MB   0.0MB/s  ??:?? ETA
+ 84%    0MB   0.0MB/s  ??:?? ETA
+100%    0MB   0.0MB/s  00:03    
+
+Setting PC to Program Start Address 0xffdd1234
+Successfully downloaded C:/Users/ecoms/Downloads/QSPIflashtools/pmufw.elf
+Info: MicroBlaze PMU (target 3) Running
+Info: Cortex-A53 #0 (target 10) Stopped at 0xfffc0000 (External Debug Request)
+INFO: Downloading ELF file: fsbl.elf to the target.
+
+
+Downloading Program -- C:/Users/ecoms/Downloads/QSPIflashtools/custom_fsbl.elf
+	section, .text: 0xfffc0000 - 0xfffd0f6f
+	section, .note.gnu.build-id: 0xfffd0f70 - 0xfffd0f93
+	section, .init: 0xfffd0fc0 - 0xfffd0ff3
+	section, .fini: 0xfffd1000 - 0xfffd1033
+	section, .rodata: 0xfffd1040 - 0xfffd3487
+	section, .sys_cfg_data: 0xfffd34c0 - 0xfffd3beb
+	section, .mmu_tbl0: 0xfffd4000 - 0xfffd400f
+	section, .mmu_tbl1: 0xfffd5000 - 0xfffd6fff
+	section, .mmu_tbl2: 0xfffd7000 - 0xfffdafff
+	section, .data: 0xfffdb000 - 0xfffdc2af
+	section, .sbss: 0xfffdc2b0 - 0xfffdc2bf
+	section, .bss: 0xfffdc2c0 - 0xfffde83f
+	section, .heap: 0xfffde840 - 0xfffdec3f
+	section, .stack: 0xfffdec40 - 0xfffe0c3f
+	section, .dup_data: 0xfffe0c40 - 0xfffe1eef
+	section, .handoff_params: 0xfffe9e00 - 0xfffe9e87
+	section, .bitstream_buffer: 0xffff0040 - 0xfffffc3f
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 14%    0MB   0.0MB/s  ??:?? ETA
+ 28%    0MB   0.0MB/s  ??:?? ETA
+ 42%    0MB   0.0MB/s  00:04 ETA
+ 56%    0MB   0.0MB/s  00:03 ETA
+ 71%    0MB   0.0MB/s  00:02 ETA
+ 85%    0MB   0.0MB/s  00:01 ETA
+ 99%    0MB   0.0MB/s  00:00 ETA
+100%    0MB   0.0MB/s  00:07    
+
+Setting PC to Program Start Address 0xfffc0000
+Successfully downloaded C:/Users/ecoms/Downloads/QSPIflashtools/custom_fsbl.elf
+Info: Cortex-A53 #0 (target 10) Running
+Info: Cortex-A53 #0 (target 10) Stopped at 0xfffcf110 (External Debug Request)
+can't read "n": no such variable
+
+xsct% source uboot_load_flash.tcl
+INFO: Configuring the FPGA...
+INFO: Downloading bitstream: system.bit to the target.
+
+
+initializing
+  0%    0MB   0.0MB/s  ??:?? ETA
+  9%    0MB   0.5MB/s  ??:?? ETA
+ 13%    0MB   0.4MB/s  ??:?? ETA
+ 16%    0MB   0.3MB/s  ??:?? ETA
+ 19%    0MB   0.3MB/s  ??:?? ETA
+ 22%    0MB   0.3MB/s  00:10 ETA
+ 25%    0MB   0.3MB/s  00:10 ETA
+ 28%    1MB   0.2MB/s  00:10 ETA
+ 31%    1MB   0.2MB/s  00:10 ETA
+ 34%    1MB   0.2MB/s  00:10 ETA
+ 37%    1MB   0.2MB/s  00:10 ETA
+ 40%    1MB   0.2MB/s  00:09 ETA
+ 43%    1MB   0.2MB/s  00:09 ETA
+ 46%    1MB   0.2MB/s  00:09 ETA
+ 49%    1MB   0.2MB/s  00:08 ETA
+ 53%    2MB   0.2MB/s  00:08 ETA
+ 55%    2MB   0.2MB/s  00:07 ETA
+ 58%    2MB   0.2MB/s  00:07 ETA
+ 62%    2MB   0.2MB/s  00:06 ETA
+ 65%    2MB   0.2MB/s  00:06 ETA
+ 68%    2MB   0.2MB/s  00:05 ETA
+ 71%    2MB   0.2MB/s  00:05 ETA
+ 74%    2MB   0.2MB/s  00:04 ETA
+ 77%    2MB   0.2MB/s  00:03 ETA
+ 80%    3MB   0.2MB/s  00:03 ETA
+ 83%    3MB   0.2MB/s  00:02 ETA
+ 86%    3MB   0.2MB/s  00:02 ETA
+ 89%    3MB   0.2MB/s  00:01 ETA
+ 92%    3MB   0.2MB/s  00:01 ETA
+ 95%    3MB   0.2MB/s  00:00 ETA
+ 98%    3MB   0.2MB/s  00:00 ETA
+100%    3MB   0.2MB/s  00:18    
+Info: MicroBlaze PMU (target 3) Stopped at 0xffd02f24 (Stop)
+INFO: Downloading ELF file: pmufw.elf to the target.
+
+
+Downloading Program -- C:/Users/ecoms/Downloads/QSPIflashtools/pmufw.elf
+	section, .vectors.reset: 0xffdc0000 - 0xffdc0007
+	section, .vectors.sw_exception: 0xffdc0008 - 0xffdc000f
+	section, .vectors.interrupt: 0xffdc0010 - 0xffdc0017
+	section, .vectors.hw_exception: 0xffdc0020 - 0xffdc0027
+	section, .text: 0xffdc0050 - 0xffdd19e7
+	section, .rodata: 0xffdd19e8 - 0xffdd2c03
+	section, .data: 0xffdd2c04 - 0xffdd6d23
+	section, .sdata2: 0xffdd6d24 - 0xffdd6d27
+	section, .sdata: 0xffdd6d28 - 0xffdd6d27
+	section, .sbss: 0xffdd6d28 - 0xffdd6d27
+	section, .bss: 0xffdd6d40 - 0xffddaa5f
+	section, .srdata: 0xffddaa60 - 0xffddb37b
+	section, .stack: 0xffddb37c - 0xffddc37f
+	section, .xpbr_serv_ext_tbl: 0xffddf6e0 - 0xffddfadf
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 16%    0MB   0.0MB/s  ??:?? ETA
+ 33%    0MB   0.0MB/s  ??:?? ETA
+ 50%    0MB   0.0MB/s  ??:?? ETA
+ 67%    0MB   0.0MB/s  ??:?? ETA
+ 96%    0MB   0.0MB/s  ??:?? ETA
+100%    0MB   0.0MB/s  00:03    
+
+Setting PC to Program Start Address 0xffdd1234
+Successfully downloaded C:/Users/ecoms/Downloads/QSPIflashtools/pmufw.elf
+Info: MicroBlaze PMU (target 3) Running
+Info: Cortex-A53 #0 (target 10) Stopped at 0xffff0000 (Reset Catch)
+INFO: Downloading ELF file: fsbl.elf to the target.
+
+
+Downloading Program -- C:/Users/ecoms/Downloads/QSPIflashtools/custom_fsbl.elf
+	section, .text: 0xfffc0000 - 0xfffd0f6f
+	section, .note.gnu.build-id: 0xfffd0f70 - 0xfffd0f93
+	section, .init: 0xfffd0fc0 - 0xfffd0ff3
+	section, .fini: 0xfffd1000 - 0xfffd1033
+	section, .rodata: 0xfffd1040 - 0xfffd3487
+	section, .sys_cfg_data: 0xfffd34c0 - 0xfffd3beb
+	section, .mmu_tbl0: 0xfffd4000 - 0xfffd400f
+	section, .mmu_tbl1: 0xfffd5000 - 0xfffd6fff
+	section, .mmu_tbl2: 0xfffd7000 - 0xfffdafff
+	section, .data: 0xfffdb000 - 0xfffdc2af
+	section, .sbss: 0xfffdc2b0 - 0xfffdc2bf
+	section, .bss: 0xfffdc2c0 - 0xfffde83f
+	section, .heap: 0xfffde840 - 0xfffdec3f
+	section, .stack: 0xfffdec40 - 0xfffe0c3f
+	section, .dup_data: 0xfffe0c40 - 0xfffe1eef
+	section, .handoff_params: 0xfffe9e00 - 0xfffe9e87
+	section, .bitstream_buffer: 0xffff0040 - 0xfffffc3f
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 14%    0MB   0.0MB/s  ??:?? ETA
+ 28%    0MB   0.0MB/s  00:08 ETA
+ 42%    0MB   0.0MB/s  00:05 ETA
+ 56%    0MB   0.0MB/s  00:04 ETA
+ 71%    0MB   0.0MB/s  00:02 ETA
+ 85%    0MB   0.0MB/s  00:01 ETA
+ 99%    0MB   0.0MB/s  00:00 ETA
+100%    0MB   0.0MB/s  00:09    
+
+Setting PC to Program Start Address 0xfffc0000
+Successfully downloaded C:/Users/ecoms/Downloads/QSPIflashtools/custom_fsbl.elf
+Info: Cortex-A53 #0 (target 10) Running
+Info: Cortex-A53 #0 (target 10) Stopped at 0xfffcf110 (External Debug Request)
+xsct% can't read "n": no such variable
+
