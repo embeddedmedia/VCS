@@ -1,0 +1,863 @@
+Xilinx Zynq MP First Stage Boot Loader
+Release 2022.1   Apr 14 2023  -  16:20:33
+MultiBootOffset: 0x0
+Reset Mode      :       System Reset
+Platform: Silicon (4.0), Cluster ID 0x80000000
+Running on A53-0 (64-bit) Processor, Device Name: XCZU3EG
+Opteran FSBL - Board Init Start
+System Controller - VERSION v1.3
+Opteran FSBL - VERSION_REG B
+Opteran FSBL - CONTROL_REG 14
+Opteran FSBL - ISR_STATUS_REG 1
+Opteran FSBL - CC_STATUS C6
+Opteran FSBL - CON_DET 0
+Opteran FSBL - Clock generator init complete
+Opteran FSBL - Reset USB Phy is complete.
+Opteran FSBL - Board Init Complete
+Processor Initialization Done
+================= In Stage 2 ============
+In JTAG Boot Mode
+================= In Stage 4 ============
+PM Init Success
+Protection configuration applied
+PL Configuration done successfully
+Exit from FSBL
+NOTICE:  BL31: v2.6(release):xlnx_rebase_v2.6_2022.1_update3-18-g0897efd45
+NOTICE:  BL31: Built : 03:55:03, Sep  9 2022
+
+
+U-Boot 2022.01 (Sep 20 2022 - 06:35:33 +0000)
+
+CPU:   ZynqMP
+Silicon: v3
+Board: Xilinx ZynqMP
+DRAM:  2 GiB
+PMUFW:  v1.1
+PMUFW no permission to change config object
+EL Level:       EL2
+Chip ID:        zu3eg
+NAND:  0 MiB
+MMC:   mmc@ff160000: 0
+Loading Environment from nowhere... OK
+In:    serial
+Out:   serial
+Err:   serial
+Bootmode: JTAG_MODE
+Reset reason:   EXTERNAL
+Net:   No ethernet found.
+scanning bus for devices...
+Hit any key to stop autoboot:  0
+JTAG: Trying to boot script at 20000000
+## Executing script at 20000000
+Loading USB device
+starting USB...
+Bus usb@fe200000: Register 2000440 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus usb@fe200000 for devices... Device NOT ready
+   Request Sense returned 02 3A 00
+Device NOT ready
+   Request Sense returned 02 3A 00
+8 USB Device(s) found
+       scanning usb for storage devices... 1 Storage Device(s) found
+  Device 0: Vendor: FLASH    Rev: 8.07 Prod: Drive AU_USB20
+            Type: Removable Hard Disk
+            Capacity: 1881.0 MB = 1.8 GB (3852288 x 512)
+List USB device files
+            System Volume Information/
+     2783   boot.scr
+  5689796   BOOT_Recovery.bin
+ 36807936   image.ub
+
+3 file(s), 1 dir(s)
+
+Loading QSPI and Erase it
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+SF: 65667072 bytes @ 0x0 Erased: OK
+Flashing BOOT.bin file
+5689796 bytes read in 342 ms (15.9 MiB/s)
+device 0 offset 0x0, size 0x580000
+SF: 5767168 bytes @ 0x0 Written: OK
+Flashing image.ub file
+36807936 bytes read in 2120 ms (16.6 MiB/s)
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Written: OK
+Flashing boot.scr file
+2783 bytes read in 1 ms (2.7 MiB/s)
+device 0 offset 0x2920000, size 0x180000
+SF: 1572864 bytes @ 0x2920000 Written: OK
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc0
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from mmc0...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc1
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from mmc1...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from qspi0
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+device 0 offset 0x5000000, size 0x3000000
+SF: 50331648 bytes @ 0x5000000 Read: OK
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from nand0
+
+
+no devices available
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+
+no devices available
+
+no devices available
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from usb0
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from usb0...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from usb1
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from usb1...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from scsi0
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+JTAG: SCRIPT FAILED: continuing...
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+missing environment variable: pxeuuid
+Retrieving file: pxelinux.cfg/01-a0-ce-c8-9b-3d-1a
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Config file not found
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+JTAG: Trying to boot script at 20000000
+## Executing script at 20000000
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc0
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc1
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from qspi0
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+device 0 offset 0x5000000, size 0x3000000
+SF: 50331648 bytes @ 0x5000000 Read: OK
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from nand0
+
+
+no devices available
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+
+no devices available
+
+no devices available
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from usb0
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from usb1
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from scsi0
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+JTAG: SCRIPT FAILED: continuing...
+switch to partitions #0, OK
+mmc0(part 0) is current device
+** No partition table - mmc 0 **
+Couldn't find partition mmc 0:1
+MMC Device 1 not found
+no mmc device at slot 1
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+device 0 offset 0x2920000, size 0x80000
+SF: 524288 bytes @ 0x2920000 Read: OK
+QSPI: Trying to boot script at 20000000
+## Executing script at 20000000
+Wrong image format for "source" command
+QSPI: SCRIPT FAILED: continuing...
+
+
+no devices available
+NAND: SCRIPT FAILED: continuing...
+
+Device 0: Vendor: FLASH    Rev: 8.07 Prod: Drive AU_USB20
+            Type: Removable Hard Disk
+            Capacity: 1881.0 MB = 1.8 GB (3852288 x 512)
+... is now current device
+** No partition table - usb 0 **
+Couldn't find partition usb 0:1
+
+Device 1: unknown device
+
+Device 0: unknown device
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+missing environment variable: pxeuuid
+Retrieving file: pxelinux.cfg/01-a0-ce-c8-9b-3d-1a
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Config file not found
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+ZynqMP> boot
+JTAG: Trying to boot script at 20000000
+## Executing script at 20000000
+Wrong image format for "source" command
+JTAG: SCRIPT FAILED: continuing...
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+missing environment variable: pxeuuid
+Retrieving file: pxelinux.cfg/01-a0-ce-c8-9b-3d-1a
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000000
+Waiting for Ethernet connection... Xilinx Zynq MP First Stage Boot Loader
+Release 2022.1   Apr 14 2023  -  16:20:33
+MultiBootOffset: 0x0
+Reset Mode      :       System Reset
+Platform: Silicon (4.0), Cluster ID 0x80000000
+Running on A53-0 (64-bit) Processor, Device Name: XCZU3EG
+Opteran FSBL - Board Init Start
+System Controller - VERSION v1.3
+Opteran FSBL - VERSION_REG B
+Opteran FSBL - CONTROL_REG 14
+Opteran FSBL - ISR_STATUS_REG 1
+Opteran FSBL - CC_STATUS C6
+Opteran FSBL - CON_DET 0
+Opteran FSBL - Clock generator init complete
+Opteran FSBL - Reset USB Phy is complete.
+Opteran FSBL - Board Init Complete
+Processor Initialization Done
+================= In Stage 2 ============
+In JTAG Boot Mode
+================= In Stage 4 ============
+PM Init Success
+Protection configuration applied
+PL Configuration done successfully
+Exit from FSBL
+NOTICE:  BL31: v2.6(release):xlnx_rebase_v2.6_2022.1_update3-18-g0897efd45
+NOTICE:  BL31: Built : 03:55:03, Sep  9 2022
+
+
+U-Boot 2022.01 (Sep 20 2022 - 06:35:33 +0000)
+
+CPU:   ZynqMP
+Silicon: v3
+Board: Xilinx ZynqMP
+DRAM:  2 GiB
+PMUFW:  v1.1
+PMUFW no permission to change config object
+EL Level:       EL2
+Chip ID:        zu3eg
+NAND:  0 MiB
+MMC:   mmc@ff160000: 0
+Loading Environment from nowhere... OK
+In:    serial
+Out:   serial
+Err:   serial
+Bootmode: JTAG_MODE
+Reset reason:   EXTERNAL
+Net:   No ethernet found.
+scanning bus for devices...
+Hit any key to stop autoboot:  0
+JTAG: Trying to boot script at 20000000
+## Executing script at 20000000
+Loading USB device
+starting USB...
+Bus usb@fe200000: Register 2000440 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus usb@fe200000 for devices... Device NOT ready
+   Request Sense returned 02 3A 00
+Device NOT ready
+   Request Sense returned 02 3A 00
+8 USB Device(s) found
+       scanning usb for storage devices... 1 Storage Device(s) found
+  Device 0: Vendor: FLASH    Rev: 8.07 Prod: Drive AU_USB20
+            Type: Removable Hard Disk
+            Capacity: 1881.0 MB = 1.8 GB (3852288 x 512)
+List USB device files
+            System Volume Information/
+     2783   boot.scr
+  5689796   BOOT_Recovery.bin
+ 36807936   image.ub
+
+3 file(s), 1 dir(s)
+
+Loading QSPI and Erase it
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+SF: 65667072 bytes @ 0x0 Erased: OK
+Flashing BOOT.bin file
+5689796 bytes read in 342 ms (15.9 MiB/s)
+device 0 offset 0x0, size 0x580000
+SF: 5767168 bytes @ 0x0 Written: OK
+Flashing image.ub file
+36807936 bytes read in 2119 ms (16.6 MiB/s)
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Written: OK
+Flashing boot.scr file
+2783 bytes read in 2 ms (1.3 MiB/s)
+device 0 offset 0x2920000, size 0x180000
+SF: 1572864 bytes @ 0x2920000 Written: OK
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc0
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from mmc0...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc1
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from mmc1...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from qspi0
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+device 0 offset 0x5000000, size 0x3000000
+SF: 50331648 bytes @ 0x5000000 Read: OK
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from nand0
+
+
+no devices available
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+
+no devices available
+
+no devices available
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from usb0
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from usb0...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from usb1
+Couldn't find partition : 0x00200000
+Can't set block device
+Importing environment(uEnv.txt) from usb1...
+Couldn't find partition : 0x10000000
+Can't set block device
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Couldn't find partition : 0x00200000
+Can't set block device
+Couldn't find partition : 0x00100000
+Can't set block device
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Couldn't find partition : 0x04000000
+Can't set block device
+Bad Linux ARM64 Image magic!
+Bad Linux ARM64 Image magic!
+Trying to load boot images from scsi0
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+JTAG: SCRIPT FAILED: continuing...
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+missing environment variable: pxeuuid
+Retrieving file: pxelinux.cfg/01-a0-ce-c8-9b-3d-1a
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Config file not found
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+JTAG: Trying to boot script at 20000000
+## Executing script at 20000000
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+Trying to load boot images from jtag
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc0
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from mmc1
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from qspi0
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+device 0 offset 0x580000, size 0x23a0000
+SF: 37355520 bytes @ 0x580000 Read: OK
+device 0 offset 0x5000000, size 0x3000000
+SF: 50331648 bytes @ 0x5000000 Read: OK
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from nand0
+
+
+no devices available
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+Booting using Fit image failed
+
+no devices available
+
+no devices available
+Bad Linux ARM64 Image magic!
+Booting using Separate images failed
+Trying to load boot images from usb0
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from usb1
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Couldn't find partition dhcp :
+Bad Linux ARM64 Image magic!
+Trying to load boot images from scsi0
+Trying to load boot images from pxe
+Trying to load boot images from dhcp
+JTAG: SCRIPT FAILED: continuing...
+switch to partitions #0, OK
+mmc0(part 0) is current device
+** No partition table - mmc 0 **
+Couldn't find partition mmc 0:1
+MMC Device 1 not found
+no mmc device at slot 1
+SF: Detected mx66u51235f with page size 512 Bytes, erase size 128 KiB, total 128 MiB
+device 0 offset 0x2920000, size 0x80000
+SF: 524288 bytes @ 0x2920000 Read: OK
+QSPI: Trying to boot script at 20000000
+## Executing script at 20000000
+Wrong image format for "source" command
+QSPI: SCRIPT FAILED: continuing...
+
+
+no devices available
+NAND: SCRIPT FAILED: continuing...
+
+Device 0: Vendor: FLASH    Rev: 8.07 Prod: Drive AU_USB20
+            Type: Removable Hard Disk
+            Capacity: 1881.0 MB = 1.8 GB (3852288 x 512)
+... is now current device
+** No partition table - usb 0 **
+Couldn't find partition usb 0:1
+
+Device 1: unknown device
+
+Device 0: unknown device
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+missing environment variable: pxeuuid
+Retrieving file: pxelinux.cfg/01-a0-ce-c8-9b-3d-1a
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/000
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/00
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/0
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm-zynqmp
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default-arm
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Retrieving file: pxelinux.cfg/default
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Config file not found
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+Waiting for Ethernet connection... unable to connect.
+Reset Ethernet Device
+Waiting for Ethernet connection... unable to connect.
+ZynqMP>
