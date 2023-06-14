@@ -1,0 +1,24 @@
+Xilinx Zynq MP First Stage Boot Loader
+Release 2022.2   Jun  9 2023  -  18:06:28
+PMU-FW is not running, certain applications may not be supported.
+QSPIPSU Generic Flash Non Blocking Read Example Test
+FlashID=0xC2 0x25 0x3A
+Flash connection mode : 2
+where 0 - Single; 1 - Stacked; 2 - Parallel
+FCTIndex: 19
+ReadCmd: 0x6B, WriteCmd: 0x2, StatusCmd: 0x5, FSRFlag: 0
+QSPIPSU Generic Flash Non Blocking Read Example Failed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
